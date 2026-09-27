@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Umesha Photo Editing - Professional Edits</title>
+<style>
+body{margin:0;font-family:'Segoe UI',sans-serif;background:#fff5f8;color:#333}
+.header{background:linear-gradient(135deg,#ff6a9a,#ff8fab);color:white;text-align:center;padding:30px 15px}
+.header h1{margin:0;font-size:28px}
+.btn{background:#25D366;color:white;padding:14px 22px;border-radius:30px;text-decoration:none;display:inline-block;font-weight:bold;margin-top:10px}
+.card{background:white;margin:15px;border-radius:18px;padding:18px;box-shadow:0 4px 15px rgba(0,0,0,0.08)}
+.services{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.service{background:#fff0f4;border-radius:12px;padding:12px;text-align:center;font-weight:600}
+input,select,textarea{width:100%;padding:12px;margin:8px 0;border-radius:10px;border:1px solid #ddd;box-sizing:border-box}
+.pay-box{background:#e8f5ff;border:2px dashed #2196F3;border-radius:15px;padding:15px}
+.pay-box h3{margin-top:0;color:#0b5fa8}
+.order-btn{background:linear-gradient(135deg,#ff3d7f,#ff6a9a);color:white;border:none;width:100%;padding:15px;border-radius:12px;font-size:17px;font-weight:bold}
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1>✨ Umesha Photo Editing ✨</h1>
+<p>ඔයාගේ Photo එක සුපිරියට ලස්සනට හදලා දෙන්නම්!</p>
+<a class="btn" href="https://wa.me/94703237027">📱 WhatsApp - 0703237027</a>
+</div>
+
+<div class="card">
+<h2>💖 අපේ Services</h2>
+<div class="services">
+<div class="service">💒 Wedding Card Edit</div>
+<div class="service">✨ HD Beautiful</div>
+<div class="service">🎨 Background Change</div>
+<div class="service">📝 Name Change</div>
+</div>
+</div>
+
+<div class="card">
+<h2>📤 Order එකක් දාන්න</h2>
+<input id="cname" placeholder="ඔයාගේ නම">
+<input id="cwhatsapp" placeholder="WhatsApp Number">
+<select id="ctype">
+<option>Wedding Card Edit</option>
+<option>Photo HD කරන්න</option>
+<option>Name Edit</option>
+<option>Background Remove</option>
+</select>
+<textarea id="cmsg" placeholder="මොකක්ද කරන්න ඕන කියලා කියන්න..."></textarea>
+<input type="file" id="photo">
+<button class="order-btn" onclick="sendOrder()">WhatsApp එකට Order එක යවන්න</button>
+</div>
+
+<div class="card pay-box">
+<h2>📥 BOC වෙතින්ද මුදල් ගෙවිය හැක</h2>
+<p>⭕ <b>UMESHA SEWMINI</b><br>
+⭕ <b>93025200</b><br>
+⭕ <b>BOC BANK [ Walapane ]</b></p>
+<p style="background:#fff3cd;padding:10px;border-radius:10px">💬 මුදල් ගෙවා <b>0703237027</b> නම්බර් එකට Screenshot එකක් සමග මැසේජ් එකක් දාන්න.</p>
+<a class="btn" style="background:#2196F3" href="https://wa.me/94703237027?text=Hi%20Umesha%20Sister,%20I%20paid%20to%20BOC">Payment එකෙන් පස්සේ Message කරන්න</a>
+</div>
+
+<div style="text-align:center;padding:20px;color:#999;font-size:13px">
+Made with ❤️ by Umesha Sewmini | 0703237027
+</div>
+
+<script>
+function sendOrder(){
+let name=document.getElementById('cname').value;
+let type=document.getElementById('ctype').value;
+let msg=document.getElementById('cmsg').value;
+let text=`Hello Umesha Sister!%0A%0AName: ${name}%0AEdit Type: ${type}%0ADetails: ${msg}%0A%0AI want to edit my photo.`;
+window.open(`https://wa.me/94703237027?text=${text}`,'_blank');
+}
+</script>
+</body>
+</html>
